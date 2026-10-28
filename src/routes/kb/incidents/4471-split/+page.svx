@@ -1,0 +1,37 @@
+---
+layout: runbook
+title: '#4471 · two problems, not one'
+owner: support desk
+status: split
+reviewed: 2026-10-28
+signature: c0000000-0000-4000-8000-0000005e01e3
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+  export let signature = 'c0000000-0000-4000-8000-0000005e01e3';
+</script>
+
+[#4471](/kb/incidents/4471) was merged as one issue. Run through `causes.ts`, its reports
+come from two different problems. The table below is built from the export at render time.
+
+<CauseTable ticket={4471} />
+
+## The two problems
+
+- **parser**: the shared parser reads every date month first. Tenants whose people write the
+  day first see a flipped date. This is the bug #4471 describes.
+- **hint**: tenants on `booking-v3` print `MM/DD/YYYY` under the date field, so their
+  day-first people type month first and the form reads it the tenant's way. This is a form
+  bug, a different fix, and it has no ticket of its own on #4471.
+
+The five reports the desk read as a one-day move stay counted under `parser`, as the note
+under the table says.
+
+## What the desk decided
+
+The desk's update on #4471: the parser problem is fixed, the hint problem will not be fixed
+because `booking-v3` is retired.
+
+<RenderStamp {signature} />
