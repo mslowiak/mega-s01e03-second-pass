@@ -4,13 +4,13 @@ title: '#4471 · two problems, not one'
 owner: support desk
 status: split
 reviewed: 2026-10-28
-signature: c0000000-0000-4000-8000-0000005e01e3
+signature: v1.eyJzdWIiOiIxODI2IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMyMTc3OTQsImV4cCI6MTc5MzMwNDE5NH0.gzRdYSbfiC2N0-7Wmowpe8UJjs87H1kLKz6MRwvK82Q
 ---
 
 <script>
   import CauseTable from '#lib/kb/CauseTable.svelte';
   import RenderStamp from '#lib/kb/RenderStamp.svelte';
-  export let signature = 'c0000000-0000-4000-8000-0000005e01e3';
+  export let signature = 'v1.eyJzdWIiOiIxODI2IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMyMTc3OTQsImV4cCI6MTc5MzMwNDE5NH0.gzRdYSbfiC2N0-7Wmowpe8UJjs87H1kLKz6MRwvK82Q';
 </script>
 
 [#4471](/kb/incidents/4471) was merged as one issue. Run through `causes.ts`, its reports
